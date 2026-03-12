@@ -1,25 +1,10 @@
 import { Header } from "@/components/header";
-import { Geist } from "next/font/google";
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-});
-
-const geistMono = Geist({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-});
+import { Main } from "@/components/main";
 
 export default function Home() {
   return (
-    <main
-      className={
-        `${geistSans.variable} ${geistMono.variable}
-        grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
+    <Main>
       <Header />
-    </main>
+    </Main>
   );
 }
