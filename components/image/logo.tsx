@@ -2,15 +2,19 @@ import { LogoProps } from "@/types/LogoProps";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Logo = ({href, width, height} : LogoProps) => {
+export const Logo = ({
+  href = "/",
+  width = 116,
+  height = 32,
+  title = "Home",
+}: LogoProps) => {
   return (
-    <Link href={href || "/"}>
+    <Link href={href} title={title}>
       <Image
         src="/Brand-Logo.svg"
-        alt="Logo"
-        width={width || 116}
-        height={height || 32}
-        className="h-8 w-auto"
+        alt="Rocketseat Logo"
+        width={width}
+        height={height}
       />
     </Link>
   );
