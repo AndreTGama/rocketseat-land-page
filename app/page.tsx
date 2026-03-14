@@ -1,10 +1,7 @@
-import { Header } from "@/components/header";
-import { Main } from "@/components/main";
-
 export default function Home() {
   return (
-    <Main>
-      <Header />
-    </Main>
+    <h1 className="text-3xl font-bold underline">
+      Home
+    </h1>
   );
 }
