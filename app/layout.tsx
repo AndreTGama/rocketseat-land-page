@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Layout } from "@/components/layout";
 
-import "./globals.css";
+import "@/styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <Layout>
           {children}
         </Layout>
